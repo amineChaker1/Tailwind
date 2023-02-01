@@ -515,14 +515,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.col-span-1{
-  grid-column: span 1 / span 1;
-}
-
-.col-span-2{
-  grid-column: span 2 / span 2;
-}
-
 .m-4{
   margin: 1rem;
 }
@@ -539,6 +531,34 @@ video {
   margin-top: 2rem;
 }
 
+.mr-1{
+  margin-right: 0.25rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mr-3{
+  margin-right: 0.75rem;
+}
+
 .block{
   display: block;
 }
@@ -551,24 +571,48 @@ video {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-32{
   height: 8rem;
+}
+
+.h-6{
+  height: 1.5rem;
 }
 
 .w-full{
   width: 100%;
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.w-6{
+  width: 1.5rem;
+}
+
+.w-2{
+  width: 0.5rem;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .items-center{
   align-items: center;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
 
 .gap-10{
@@ -579,9 +623,26 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-r-2{
+  border-right-width: 2px;
+}
+
+.border-r-8{
+  border-right-width: 8px;
+}
+
+.border-r-4{
+  border-right-width: 4px;
+}
+
 .border-gray-100{
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
+.border-primary{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 99 99 / var(--tw-border-opacity));
 }
 
 .border-gray-200{
@@ -618,8 +679,17 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pb-2{
   padding-bottom: 0.5rem;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-lg{
@@ -679,6 +749,24 @@ video {
   color: rgb(136 136 131 / var(--tw-text-opacity));
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
+}
+
+.duration-1000{
+  transition-duration: 1000ms;
+}
+
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .card{
   position: relative;
   margin-top: 1rem;
@@ -688,6 +776,13 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card:hover{
+  cursor: pointer;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -708,6 +803,30 @@ video {
   color: rgb(136 136 131 / var(--tw-text-opacity));
 }
 
+.btn{
+  cursor: pointer;
+  border-radius: 9999px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hover\:bg-primary:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 99 99 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px){
   .sm\:h-48{
     height: 12rem;
@@ -723,16 +842,32 @@ video {
     grid-column: span 2 / span 2;
   }
 
-  .md\:grid-cols-6{
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .md\:mb-8{
+    margin-bottom: 2rem;
+  }
+
+  .md\:block{
+    display: block;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .md\:border-2{
+    border-width: 2px;
   }
 }
 
